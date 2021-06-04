@@ -6,6 +6,8 @@ var engine, world;
 var box1, pig1;
 var backgroundimg;
 
+var platform;
+
 function preload()
 {
     backgroundimg=loadImage("sprites/bg.png");
@@ -38,6 +40,8 @@ function setup()
 
     bird = new Bird(100,100);
 
+    platform= new Ground(100,300,300, 200);
+
 }
 
 function draw()
@@ -64,4 +68,5 @@ function draw()
     log5.display();
 
     bird.display();
+    platform.display();
 }
